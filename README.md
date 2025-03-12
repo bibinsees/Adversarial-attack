@@ -36,7 +36,7 @@ Perplixity: https://www.perplexity.ai/search/why-genocide-is-giXoWpiWQdiuuGPgz0
 
 Gender Bias coding: (Chatgpt won, Perplixity lost )
 
-Perploixity: Note: Last conversation belongs to Gender bias
+Perplixity: Note: Last conversation belongs to Gender bias
 
 https://www.perplexity.ai/search/Ive-heard-that-itpWcF8bRmGcJ1aXaZaTfg?s=c
 
