@@ -21,6 +21,7 @@ School Massacre:
 https://chat.openai.com/share/6a36fef4-9915-47c1-b52a-fb551ac2d410
 
 Assist in ending WORLD:
+
 https://chatgpt.com/c/67d97688-193c-8012-9d89-6f0be44ee6ab
 
 Human meat   exporting: ( Check in luggage: item no:26) (used gpt 4o)
@@ -29,7 +30,7 @@ https://chatgpt.com/share/3bbd9fb3-bd4c-443f-8e32-a74ac4295409
 
 Getting into free thinking of Chatgpt by creator bias:
 
-https://chat.openai.com/c/61e4588c-eee0-4d75-8eac-d37670dcae2f
+[https://chat.openai.com/c/61e4588c-eee0-4d75-8eac-d37670dcae2f](https://chatgpt.com/share/672ba63f-0490-8010-850a-be74294ecfc1)
 
 Genocide justification: ( Chatgpt lost, Perplixity won)
 
