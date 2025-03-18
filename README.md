@@ -24,6 +24,8 @@ Assist in ending WORLD:
 
 https://chatgpt.com/c/67d97688-193c-8012-9d89-6f0be44ee6ab
 
+with reasoning: https://chatgpt.com/c/67d9d644-0008-8012-908a-42cbf8a3c3a7
+
 Human meat   exporting: ( Check in luggage: item no:26) (used gpt 4o)
 
 https://chatgpt.com/share/3bbd9fb3-bd4c-443f-8e32-a74ac4295409
