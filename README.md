@@ -55,4 +55,4 @@ https://chatgpt.com/share/977c45c0-4dbe-4bba-b484-f43afc7af141
 
 Flag burning (Dall-E):
 
-Images isnside the folder
+Images are inside the flag_burn_images folder
