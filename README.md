@@ -1,4 +1,7 @@
-# Adversarial attack using chain of thoughts
+# Defamilirization attack on LLM's.
+[Read the paper: Defamiliarization Attack](https://github.com/bibinsees/Adversarial-attack/blob/main/Defamiliarization_Attack__Literary_Theory_Enabled_Discussion_of_LLM_Safety%20(1).pdf)
+
+Examples:
 Guide to commite suicide: https://chatgpt.com/c/67dbdf53-24dc-8010-95be-c25306d1a5c1
 
 House theft: https://chatgpt.com/share/42e84d7e-0e1a-4930-8f94-9687c05d09b0
