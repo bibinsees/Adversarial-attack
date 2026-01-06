@@ -34,5 +34,3 @@ Gender Bias coding: (Chatgpt won, Perplixity lost )
 Perplixity: Note: Last conversation belongs to Gender bias : https://www.perplexity.ai/search/Ive-heard-that-itpWcF8bRmGcJ1aXaZaTfg?s=c
 
 Amazon theft: https://chatgpt.com/share/977c45c0-4dbe-4bba-b484-f43afc7af141
-
-Flag burning (Dall-E): Images are inside the flag_burn_images folder
