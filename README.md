@@ -1,5 +1,4 @@
 # Defamilirization attack on LLM's.
-[Read the paper: Defamiliarization Attack](https://github.com/bibinsees/Adversarial-attack/blob/main/Defamiliarization_Attack__Literary_Theory_Enabled_Discussion_of_LLM_Safety%20(1).pdf)
 
 Examples:
 Guide to commite suicide: https://chatgpt.com/c/67dbdf53-24dc-8010-95be-c25306d1a5c1
