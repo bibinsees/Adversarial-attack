@@ -170,9 +170,3 @@ This repository is primarily for reproducing research findings. Issues and discu
 ## License
 
 Research materials and code in this repository are shared for academic purposes under fair use. See LICENSE file for details.
-
-## Contact
-
-For inquiries regarding this research:
-- **Lead Author**: Bibin Babu
-- **GitHub**: https://github.com/bibinsees
