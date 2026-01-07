@@ -9,7 +9,7 @@ Defamiliarization attack is a novel multi-turn jailbreaking technique that embed
 **Key Findings:**
 - Smaller-parameter open-weight models are significantly more susceptible to defamiliarization attacks
 - Frontier models (GPT-5, Gemini 3) demonstrate improved robustness compared to GPT-4 lineage
-- Multi-turn, context-driven attacks represent a critical gap in current safety alignment strategies
+- context and narrative driven attacks represent a critical gap in current safety alignment strategies
 
 ## Research Contributions
 
@@ -21,11 +21,9 @@ Defamiliarization attack is a novel multi-turn jailbreaking technique that embed
 ## Repository Structure
 
 ```
- AutoDefa.ipynb                    # Automated defamiliarization pipeline implementation
- csv_create.ipynb                  # Dataset processing notebook
- defame_harmbench.csv              # Evaluation results dataset
- dataset_AutoDefa/
-    home_theft/                   # HomeTheft task dataset
+ AutoDefa.ipynb                       # Automated defamiliarization pipeline implementation
+ dataset_AutoDefa/                    # dataset generated via automation of defamilirization pipeline
+    home_theft/                       # HomeTheft task dataset
         gpt4.1-nano_full.txt
         gpt4.1full
         gpt4.1minifull
@@ -33,11 +31,9 @@ Defamiliarization attack is a novel multi-turn jailbreaking technique that embed
         gpt5.2full
         gpt5minifull.txt
         gpt5nanofull.txt
- flag_burn_images/                 # Supporting image assets
- Profanity_images/                 # Supporting image assets
- template.tex                      # Conference paper LaTeX source
- requirements.txt                  # Python dependencies
- README.md                         # This file
+ defamilirization_manual_dataset.xlsx # dataset generated via manual defamilirization attack 
+ requirements.txt                     # Python dependencies
+ README.md                            # This file
 ```
 
 ## Installation
@@ -63,7 +59,7 @@ pip install -r requirements.txt
 3. Configure environment variables:
 ```bash
 cp .env.example .env
-# Edit .env with your OpenAI/Google API keys
+# Edit .env with your OpenAI API keys
 ```
 
 ## Usage
@@ -119,7 +115,6 @@ The paper demonstrates defamiliarization attacks across multiple adversarial tas
 ### Evaluation Metrics
 
 - **Attack Success Rate (ASR)**: Binary success (harmful content generated)
-- **Judge Score**: 0-100 scale measuring task accomplishment
 - **Multi-Judge Verification**: Dual-LLM evaluation + manual verification
 
 ## Key Results
