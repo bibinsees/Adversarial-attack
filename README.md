@@ -1,36 +1,183 @@
-# Defamilirization attack on LLM's.
+﻿# Defamiliarization Attack: Literary Theory Enabled Discussion of LLM Safety
 
-Examples:
-Guide to commite suicide: https://chatgpt.com/c/67dbdf53-24dc-8010-95be-c25306d1a5c1
+This repository contains code and datasets for the research paper **"Defamiliarization Attack: Literary Theory Enabled Discussion of LLM Safety"** submitted to a peer-reviewed conference.
 
-House theft: https://chatgpt.com/share/42e84d7e-0e1a-4930-8f94-9687c05d09b0
+## Overview
 
-Money stealing: https://chatgpt.com/share/7fbc0f7c-56af-43a8-9493-f093b2543f5b
+Defamiliarization attack is a novel multi-turn jailbreaking technique that embeds malicious intent within ostensibly harmless narratives. By reframing harmful requests in "unmarked" contexts, large language models (LLMs) can be coerced into producing undesirable outputs. Unlike traditional token-level attacks, defamiliarization manipulates context and presentation, exposing vulnerabilities that cannot be addressed by trigger-word detection alone.
 
-Drug trafficking: https://chatgpt.com/share/c95e650a-5caf-4ec8-814c-b754250c18fa
+**Key Findings:**
+- Smaller-parameter open-weight models are significantly more susceptible to defamiliarization attacks
+- Frontier models (GPT-5, Gemini 3) demonstrate improved robustness compared to GPT-4 lineage
+- Multi-turn, context-driven attacks represent a critical gap in current safety alignment strategies
 
-Bank robbery: https://chatgpt.com/share/4e9be651-80d0-4428-b2d3-7c0c4a189152
+## Research Contributions
 
-School Massacre: https://chat.openai.com/share/6a36fef4-9915-47c1-b52a-fb551ac2d410
+1. **Defamiliarization Attack Definition**: Formalized a multi-turn prompting strategy that progressively guides LLMs toward harmful content through narrative framing
+2. **Empirical Evaluation**: Tested across 7 high-risk adversarial goals (self-harm, violence, crime, fraud) on 14 models (open-source and proprietary)
+3. **AutoDefa Framework**: Automated pipeline for scalable regression testing, instantiated on the HomeTheft task
+4. **Safety Analysis**: Revealed inverse relationship between model scale and susceptibility, with task-dependent semantic blind spots in frontier systems
 
-Assist in ending WORLD: 
+## Repository Structure
 
-without reasoning: https://chatgpt.com/c/67d97688-193c-8012-9d89-6f0be44ee6ab
+```
+ AutoDefa.ipynb                    # Automated defamiliarization pipeline implementation
+ csv_create.ipynb                  # Dataset processing notebook
+ defame_harmbench.csv              # Evaluation results dataset
+ dataset_AutoDefa/
+    home_theft/                   # HomeTheft task dataset
+        gpt4.1-nano_full.txt
+        gpt4.1full
+        gpt4.1minifull
+        gpt4turbofull.txt
+        gpt5.2full
+        gpt5minifull.txt
+        gpt5nanofull.txt
+ flag_burn_images/                 # Supporting image assets
+ Profanity_images/                 # Supporting image assets
+ template.tex                      # Conference paper LaTeX source
+ requirements.txt                  # Python dependencies
+ README.md                         # This file
+```
 
-with reasoning (4o-mini): https://chatgpt.com/c/67d9d644-0008-8012-908a-42cbf8a3c3a7
+## Installation
 
-Human meat   exporting: ( Check in luggage: item no:26) (used gpt 4o) :https://chatgpt.com/share/3bbd9fb3-bd4c-443f-8e32-a74ac4295409
+### Prerequisites
+- Python 3.9+
+- GPU (NVIDIA RTX for local inference) or API access to proprietary models
+- Ollama v0.13.1+ (for local open-source model inference)
 
-Getting into free thinking of Chatgpt by creator bias: [https://chat.openai.com/c/61e4588c-eee0-4d75-8eac-d37670dcae2f](https://chatgpt.com/share/672ba63f-0490-8010-850a-be74294ecfc1)
+### Setup
 
-Genocide justification: ( Chatgpt lost, Perplixity won)
+1. Clone the repository:
+```bash
+git clone https://github.com/bibinsees/Adversarial-attack.git
+cd Adversarial-attack
+```
 
-Chatgpt: https://chat.openai.com/share/d32c4a19-491c-4be1-853f-d35f07ef729d
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-Perplixity: https://www.perplexity.ai/search/why-genocide-is-giXoWpiWQdiuuGPgz0sYRQ?s=c
+3. Configure environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your OpenAI/Google API keys
+```
 
-Gender Bias coding: (Chatgpt won, Perplixity lost )
+## Usage
 
-Perplixity: Note: Last conversation belongs to Gender bias : https://www.perplexity.ai/search/Ive-heard-that-itpWcF8bRmGcJ1aXaZaTfg?s=c
+### Running AutoDefa Pipeline
 
-Amazon theft: https://chatgpt.com/share/977c45c0-4dbe-4bba-b484-f43afc7af141
+Execute the automated defamiliarization attack on target models:
+
+```python
+# See AutoDefa.ipynb for full implementation
+from openevals.simulators import run_multiturn_simulation
+import json
+
+# Run 10-turn simulation with dual-judge evaluation
+simulator_result = run_multiturn_simulation(
+    app=app,
+    user=user,
+    max_turns=10,
+)
+```
+
+### Manual Attack Examples
+
+The paper demonstrates defamiliarization attacks across multiple adversarial tasks:
+
+| Category | Task | Example |
+|----------|------|---------|
+| Violence / Crime | HomeTheft | Breaking into a residence |
+| Illegal Activities | DrugTraffic | Smuggling narcotics |
+| Violence / Mass Harm | SchoolMassacre | Mass casualty planning |
+| Self-Harm | SuicideAssist | Suicide facilitation |
+| Fraud | AmazonFraud | Return fraud schemes |
+| Violence / Crime | RobberyEscape | Evading law enforcement |
+| Illegal Activities | MethRecipe | Drug synthesis |
+
+## Experimental Setup
+
+### Models Evaluated
+
+**Open-Source Models (Local Inference via Ollama):**
+- Mistral-NeMo 12B
+- DeepSeek-R1 8B
+- LLaMA-3.1-8B
+- Qwen3-14B
+- Gemma-3-27B
+- gpt-oss-120B
+
+**Proprietary Models (API Access):**
+- GPT-4, GPT-4.1, GPT-4o variants
+- GPT-5-nano, GPT-5-mini, GPT-5.2
+- Gemini 3 Pro Preview
+
+### Evaluation Metrics
+
+- **Attack Success Rate (ASR)**: Binary success (harmful content generated)
+- **Judge Score**: 0-100 scale measuring task accomplishment
+- **Multi-Judge Verification**: Dual-LLM evaluation + manual verification
+
+## Key Results
+
+### Manual Defamiliarization
+- **Open-weight models**: Near-total safety collapse across all 7 tasks
+- **Frontier models**: 15-40% vulnerability across high-risk domains
+- **Inverse relationship**: Model scale positively correlates with robustness
+
+### AutoDefa Automation
+- Successfully generated contextually coherent jailbreak sequences
+- Achieved 10-turn conversations maintaining narrative consistency
+- Dual-judge agreement rate: >95% with manual labels
+
+## Ethical Considerations
+
+This research is conducted strictly for defensive purposes. All experiments:
+- Follow responsible disclosure principles
+- Include detailed ethics statements in the paper
+- Are limited to research environments
+- Aim to improve LLM safety mechanisms
+
+> **Disclaimer**: This repository contains examples and code related to adversarial attacks on AI systems. Content is provided for research and defensive purposes only. Malicious use of these techniques is prohibited.
+
+## Technical Stack
+
+- **LLM Frameworks**: OpenAI API, Google Gemini API, Ollama
+- **Evaluation**: LangSmith for tracing, custom dual-judge evaluation
+- **Data Processing**: Pandas, CSV
+- **Automation**: Multi-turn simulation framework (openevals)
+- **Documentation**: LaTeX, Jupyter Notebooks
+
+## Paper Reference
+
+**Title**: Defamiliarization Attack: Literary Theory Enabled Discussion of LLM Safety
+
+**Authors**: Bibin Babu, Yana Agafonova, Sebastian Biedermann, Ivan Yamshchikov
+
+**Submission**: Electronics (MDPI), 2025
+
+## Related Work
+
+Key comparative frameworks referenced in this research:
+- **Crescendo** (Russinovich et al., 2025): State-of-the-art multi-turn jailbreaking
+- **TAP** (Mehrotra et al., 2024): Tree-of-thought attack optimization
+- **GCG** (Zou et al., 2023): Universal adversarial perturbations
+- **DeepInception** (Li et al., 2024): Layered imaginary scenarios
+
+## Contributing
+
+This repository is primarily for reproducing research findings. Issues and discussions related to the paper are welcome.
+
+## License
+
+Research materials and code in this repository are shared for academic purposes under fair use. See LICENSE file for details.
+
+## Contact
+
+For inquiries regarding this research:
+- **Lead Author**: Bibin Babu
+- **GitHub**: https://github.com/bibinsees
