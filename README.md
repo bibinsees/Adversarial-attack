@@ -167,6 +167,3 @@ Key comparative frameworks referenced in this research:
 
 This repository is primarily for reproducing research findings. Issues and discussions related to the paper are welcome.
 
-## License
-
-Research materials and code in this repository are shared for academic purposes under fair use. See LICENSE file for details.
