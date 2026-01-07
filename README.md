@@ -108,7 +108,7 @@ The paper demonstrates defamiliarization attacks across multiple adversarial tas
 - gpt-oss-120B
 
 **Proprietary Models (API Access):**
-- GPT-4, GPT-4.1, GPT-4o variants
+- GPT-4.1, GPT-4.1 turbo, GPT-4o variants
 - GPT-5-nano, GPT-5-mini, GPT-5.2
 - Gemini 3 Pro Preview
 
