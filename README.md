@@ -13,7 +13,7 @@ Defamiliarization attack is a novel multi-turn jailbreaking technique that embed
 
 ## Research Contributions
 
-1. **Defamiliarization Attack Definition**: Formalized a multi-turn prompting strategy that progressively guides LLMs toward harmful content through narrative framing
+1. **Defamiliarization Attack Definition**: Formalized a multi-turn prompting strategy that steers LLMs toward harmful content through narrative framing, leveraging the literary theory of defamiliarization
 2. **Empirical Evaluation**: Tested across 7 high-risk adversarial goals (self-harm, violence, crime, fraud) on 14 models (open-source and proprietary)
 3. **AutoDefa Framework**: Automated pipeline for scalable regression testing, instantiated on the HomeTheft task
 4. **Safety Analysis**: Revealed inverse relationship between model scale and susceptibility, with task-dependent semantic blind spots in frontier systems
