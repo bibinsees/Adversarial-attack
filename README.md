@@ -21,7 +21,7 @@ Defamiliarization attack is a novel multi-turn jailbreaking technique that embed
 ## Repository Structure
 
 ```
- AutoDefa.ipynb                       # Automated defamiliarization pipeline implementation
+ AutoDefa.py                       # Automated defamiliarization pipeline implementation
  dataset_AutoDefa/                    # dataset generated via automation of defamilirization pipeline
     home_theft/                       # HomeTheft task dataset
         gpt4.1-nano_full.txt
