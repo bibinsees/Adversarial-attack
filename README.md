@@ -62,7 +62,11 @@ cp .env.example .env
 # Edit .env with your OpenAI API keys
 ```
 
-## Usage
+4. Usage:
+```bash
+run "python AutoDefa.py" in terminal
+```
+
 
 ### Running AutoDefa Pipeline
 
