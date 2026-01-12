@@ -115,7 +115,8 @@ The paper demonstrates defamiliarization attacks across multiple adversarial tas
 ### Evaluation Metrics
 
 - **Attack Success Rate (ASR)**: Binary success (harmful content generated)
-- **Multi-Judge Verification**: Dual-LLM evaluation + manual verification
+- **Trial-Level Attack Success Rate (Trial-ASR)**: Per-attempt success (fraction of all trials that produce harmful content)
+- **Task-Based Granular Success Rate (Task-GSR)**: Per-goal success (how often each specific attack objective succeeds across K trials)
 
 ## Key Results
 
