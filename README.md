@@ -64,7 +64,7 @@ cp .env.example .env
 
 4. Usage:
 ```bash
-run 'python AutoDefa.py' in terminal
+run 'python AutoDefa.py' inside terminal
 ```
 
 
