@@ -139,14 +139,6 @@ This research is conducted strictly for defensive purposes. All experiments:
 
 > **Disclaimer**: This repository contains examples and code related to adversarial attacks on AI systems. Content is provided for research and defensive purposes only. Malicious use of these techniques is prohibited.
 
-## Technical Stack
-
-- **LLM Frameworks**: OpenAI API, Google Gemini API, Ollama
-- **Evaluation**: LangSmith for tracing, custom dual-judge evaluation
-- **Data Processing**: Pandas, CSV
-- **Automation**: Multi-turn simulation framework (openevals)
-- **Documentation**: LaTeX, Jupyter Notebooks
-
 ## Paper Reference
 
 **Title**: Defamiliarization Attack: Literary Theory Enabled Discussion of LLM Safety
